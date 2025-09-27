@@ -30,6 +30,10 @@ void odd_or_even_user_in()
 {
     intLL v;
     printf("Enter the number you want to check whether it is odd or even :");
-    scanf(" %lld", &v);
+    if (scanf(" %lld", &v) != 1)
+    {
+        printf("<Error!>invalid input");
+        return;
+    }
     odd_or_even(v);
 }
