@@ -3,7 +3,8 @@
 // includes
 #include <stdio.h>
 #include <stdbool.h>
-// defines
+#include <ctype.h>
+
 // function declaration
 size_t str_len(const char *v);
 bool palindrome(const char *V);
@@ -39,7 +40,7 @@ bool palindrome(const char *v) // this function is to find the given sequence of
         return false;
     while (left < right)
     {
-        if (v[left] != v[right])
+        if (tolower((unsigned char)v[left]) != tolower((unsigned char)v[right]))
         {
             return false; // returns false(0) if it is a not a palindrome ...
         }
